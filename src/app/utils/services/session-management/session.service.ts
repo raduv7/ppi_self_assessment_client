@@ -1,7 +1,7 @@
 import {Injectable, OnInit} from '@angular/core';
 import {BehaviorSubject, Observable, Observer, of, Subject} from "rxjs";
 import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
-import jwt_decode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 import {environment} from "../../../../environment/environment";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -39,7 +39,7 @@ export class SessionService {
   getHeaders(): HttpHeaders {
     if(this.isAuthenticated()) {
       return new HttpHeaders({
-        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/json',
         token: this.internalToken || '',
       });
     }
@@ -138,7 +138,7 @@ export class SessionService {
       if(!!this.internalToken) {
         const jwtToken: string = this.internalToken;
         if (jwtToken) {
-          const decodedToken: any = jwt_decode(jwtToken);
+          const decodedToken: any = jwtDecode(jwtToken);
           const expirationDate: Date = new Date(0);
           expirationDate.setUTCSeconds(decodedToken.exp);
 

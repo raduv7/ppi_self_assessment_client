@@ -41,6 +41,8 @@ import { PaymentsAddFileComponent } from './components/entities/payments/payment
 import { AccountsAddComponent } from './components/entities/accounts/accounts-add/accounts-add.component';
 import { ProfilesAddComponent } from './components/entities/profiles/profiles-add/profiles-add.component';
 import { UsersAddComponent } from './components/entities/users/users-add/users-add.component';
+import { ChangeFileButtonComponent } from './components/authentication/dashboard/change-file-button/change-file-button.component';
+import { UploadButtonComponent } from './components/authentication/dashboard/upload-button/upload-button.component';
 
 
 @NgModule({
@@ -75,6 +77,8 @@ import { UsersAddComponent } from './components/entities/users/users-add/users-a
     AccountsAddComponent,
     ProfilesAddComponent,
     UsersAddComponent,
+    ChangeFileButtonComponent,
+    UploadButtonComponent,
   ],
   imports: [
     BrowserModule,
