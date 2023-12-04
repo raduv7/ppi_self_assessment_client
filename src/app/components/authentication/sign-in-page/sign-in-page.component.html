@@ -1,0 +1,7 @@
+<div class="sign-in-container">
+  <app-auth-form
+    [titles]="formTitles"
+    [fieldTypes]="formFieldTypes"
+    (submitEventEmitter)="onSignIn($event)"
+  ></app-auth-form>
+</div>

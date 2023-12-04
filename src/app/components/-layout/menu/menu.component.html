@@ -1,0 +1,8 @@
+<div class="menu-container">
+  <div class="menu-entry-wrapper" *ngFor="let operation of operations | async">
+    <app-menu-entry
+      [entryType]="operation"
+      (clickEvent)="onEntryClick($event)"
+    ></app-menu-entry>
+  </div>
+</div>

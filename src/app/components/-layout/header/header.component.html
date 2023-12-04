@@ -1,0 +1,22 @@
+<div class="header-container" *ngIf="amIShown">
+
+  <div class="header-container-item left">
+    <app-header-menu-button
+      (clickEvent)="onMenuClick($event)"
+    ></app-header-menu-button>
+  </div>
+
+  <div class="header-container-item center">
+    <app-header-title></app-header-title>
+  </div>
+
+  <div class="header-container-item right">
+    <app-header-dashboard-button
+      (clickEvent)="onDashboardClick($event)"
+    ></app-header-dashboard-button>
+    <app-header-sign-out-button
+      (clickEvent)="onSignOutClick($event)"
+    ></app-header-sign-out-button>
+  </div>
+
+</div>

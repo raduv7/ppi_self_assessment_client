@@ -1,0 +1,17 @@
+@import "@angular/material/prebuilt-themes/purple-green.css";
+
+@import "variables";
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: $primary-colour;
+  //font-family: 'Gloria Hallelujah', cursive;
+  //font-family: "Rubik", sans-serif;
+  color: $tertiary-colour-darkened;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

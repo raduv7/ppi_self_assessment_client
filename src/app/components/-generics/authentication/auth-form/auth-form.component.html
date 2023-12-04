@@ -1,0 +1,20 @@
+<div class="form" [ngStyle]="{'min-height': (fieldTypes.length * 75 + titles.length * 30 + 170) + 'px'}">
+
+  <div class="titles-wrapper">
+    <a class="title" *ngFor="let title of titles">
+      {{ title }}
+    </a>
+  </div>
+
+  <div class="input-box-wrapper" *ngFor="let fieldType of fieldTypes; let i = index">
+    <app-auth-form-abstract-field
+      [type]="fieldType"
+      (typeChange)="updateFieldType(i, $event)"
+    ></app-auth-form-abstract-field>
+  </div>
+
+  <app-auth-form-submit-button
+    (clickEvent)="onSubmit()"
+  ></app-auth-form-submit-button>
+
+</div>

@@ -1,0 +1,18 @@
+
+$primary-colour: #e8e8e8;
+$primary-colour-darkened: #EBE4D2;
+$secondary-colour: #4BA483;
+$secondary-colour-darkened: #397B63;
+$tertiary-colour: #306056;
+$tertiary-colour-darkened: #1E3C36;
+$black: #333333;
+
+$shadow-dark: #c8c8c8;
+$shadow-light: #fefefe;
+
+$box-shadow-xs-inset: inset 4px 4px 12px $shadow-dark,
+inset -4px -4px 12px $shadow-light;
+$box-shadow-xs: 6px 6px 12px $shadow-dark,
+-6px -6px 12px $shadow-light;
+$box-shadow-xl: 16px 16px 32px $shadow-dark,
+-16px -16px 32px $shadow-light;

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;  /* This ensures padding is included in the element's total width */
+}
+
+.header-container {
+  width: 100%;
+  min-height: calc(2vh + 16px);
+  background: #e3e3e3;
+  box-shadow: 8px 8px 8px #d5d5d5,
+  -8px 8px 8px #d5d5d5;
+  padding: 16px 24px 8px 24px;
+  text-align: center;
+  margin-top: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    padding-left: 10px;
+    width: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .center {
+    padding-top: 10px;
+  }
+
+  .right {
+    width: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .if-not-dashboard-button {
+      margin-right: 10px;
+    }
+  }
+
+  .header-container-item {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+  }
+}

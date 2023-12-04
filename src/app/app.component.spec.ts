@@ -12,16 +12,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'self-assessment-client'`, () => {
+  it(`should have as title 'umf-scheduler-client'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('self-assessment-client');
+    expect(app.title).toEqual('umf-scheduler-client');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('self-assessment-client app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('umf-scheduler-client app is running!');
   });
 });
