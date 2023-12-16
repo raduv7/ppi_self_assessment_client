@@ -4,9 +4,11 @@
 
     <app-change-password-button (clickEvent)="onChangePasswordButtonClick()"></app-change-password-button>
 
+    <br><br><br>
     <form (submit)="onFileUpload()">
-      <input type="file" (change)="onFileSelected($event)" />
-      <button type="submit">Upload</button>
+      <input type="file" class="menuButton" (change)="onFileSelected($event)" />
+      <br><br>
+      <button type="submit" class="menuButton">Upload</button>
     </form>
 
 </div>

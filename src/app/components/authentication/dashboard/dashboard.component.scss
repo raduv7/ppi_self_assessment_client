@@ -7,3 +7,30 @@
   align-items: center;
   gap: 0.8em;
 }
+
+.menuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13%;
+  color: #090909;
+  width: 13em;
+  height: 3em;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: $box-shadow-xs;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.menuButton:hover {
+  border: 1px solid white;
+}
+
+.menuButton:active {
+  color: #666;
+  box-shadow: $box-shadow-xs-inset
+}
