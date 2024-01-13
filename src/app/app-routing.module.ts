@@ -9,15 +9,8 @@ import {
 import {DashboardComponent} from "./components/authentication/dashboard/dashboard.component";
 import {ErrorComponent} from "./components/authentication/error/error.component";
 import { sessionGuard} from "./utils/services/session-management/session.guard";
-import {AccountsComponent} from "./components/entities/accounts/accounts/accounts.component";
-import {PaymentsComponent} from "./components/entities/payments/payments/payments.component";
-import {ProfilesComponent} from "./components/entities/profiles/profiles/profiles.component";
-import {UsersComponent} from "./components/entities/users/users/users.component";
-import {AccountsAddComponent} from "./components/entities/accounts/accounts-add/accounts-add.component";
-import {PaymentsAddFileComponent} from "./components/entities/payments/payments-add-file/payments-add-file.component";
-import {PaymentsAddComponent} from "./components/entities/payments/payments-add/payments-add.component";
-import {ProfilesAddComponent} from "./components/entities/profiles/profiles-add/profiles-add.component";
-import {UsersAddComponent} from "./components/entities/users/users-add/users-add.component";
+import {ProfilesComponent} from "./components/entity/profile/profiles/profiles.component";
+import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/profiles-add.component";
 
 
 const routes: Routes = [
@@ -46,57 +39,15 @@ const routes: Routes = [
     canActivate: [sessionGuard],
   },
   {
-    path: 'accounts', pathMatch: 'full',
-    component: AccountsComponent,
-    data: { title: 'Accounts' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'accounts-add', pathMatch: 'full',
-    component: AccountsAddComponent,
-    data: { title: 'Add Account' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'payments', pathMatch: 'full',
-    component: PaymentsComponent,
-    data: { title: 'Payments' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'payments-add', pathMatch: 'full',
-    component: PaymentsAddComponent,
-    data: { title: 'Add Payment' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'payments-add-file', pathMatch: 'full',
-    component: PaymentsAddFileComponent,
-    data: { title: 'Add Payments File' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'profiles', pathMatch: 'full',
+    path: 'profile', pathMatch: 'full',
     component: ProfilesComponent,
     data: { title: 'Profiles' },
     canActivate: [sessionGuard],
   },
   {
-    path: 'profiles', pathMatch: 'full',
+    path: 'profile', pathMatch: 'full',
     component: ProfilesAddComponent,
     data: { title: 'Add Profile' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'users', pathMatch: 'full',
-    component: UsersComponent,
-    data: { title: 'Users' },
-    canActivate: [sessionGuard],
-  },
-  {
-    path: 'users-add', pathMatch: 'full',
-    component: UsersAddComponent,
-    data: { title: 'Add User' },
     canActivate: [sessionGuard],
   },
   {

@@ -1,3 +1,3 @@
 export type MenuEntryType = {
-  name: "profiles" | "users" | "schedules" | "exams" | "departments" | "classrooms";
+  name: "profile" | "users" | "schedules" | "exams" | "departments" | "classrooms";
 }

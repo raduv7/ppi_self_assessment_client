@@ -52,7 +52,7 @@ export class SessionService {
 
   signIn(signInData: SignInDto): void {
     this.httpClient.post(
-      environment.apiBaseUrl + '/auth/sign_in',
+      environment.apiBaseUrl + 'authentication_management/sign_in',
         signInData,
       {
         headers: this.getHeaders(),
@@ -90,7 +90,7 @@ export class SessionService {
 
   changePassword(changePasswordData: ChangePasswordDto): void {
     this.httpClient.put(
-        `http://localhost:8080/auth/${ this.getUsername() }/password`,
+      environment.apiBaseUrl + `authentication_management/${ this.getUsername() }/password`,
         changePasswordData,
         {
           headers: this.getHeaders(),

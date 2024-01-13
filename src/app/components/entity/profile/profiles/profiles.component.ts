@@ -7,7 +7,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {EOperationType} from "../../../../utils/models/enums/e-operation.type";
 
 @Component({
-  selector: 'app-profiles',
+  selector: 'app-profile',
   templateUrl: './profiles.component.html',
   styleUrls: ['./profiles.component.scss']
 })

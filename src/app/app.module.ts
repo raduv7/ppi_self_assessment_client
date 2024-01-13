@@ -31,18 +31,14 @@ import { MagicTextComponent } from './components/authentication/dashboard/magic-
 import { ChangePasswordButtonComponent } from './components/authentication/dashboard/change-password-button/change-password-button.component';
 import { MenuComponent } from './components/-layout/menu/menu.component';
 import { MenuEntryComponent } from './components/-layout/menu/menu-entry/menu-entry.component';
-import { ProfilesComponent } from './components/entities/profiles/profiles/profiles.component';
-import { UsersComponent } from './components/entities/users/users/users.component';
-import { AccountsComponent } from './components/entities/accounts/accounts/accounts.component';
-import { PaymentsComponent } from './components/entities/payments/payments/payments.component';
 import { AddButtonComponent } from './components/-generics/entities/entities/add-button/add-button.component';
-import { PaymentsAddComponent } from './components/entities/payments/payments-add/payments-add.component';
-import { PaymentsAddFileComponent } from './components/entities/payments/payments-add-file/payments-add-file.component';
-import { AccountsAddComponent } from './components/entities/accounts/accounts-add/accounts-add.component';
-import { ProfilesAddComponent } from './components/entities/profiles/profiles-add/profiles-add.component';
-import { UsersAddComponent } from './components/entities/users/users-add/users-add.component';
 import { ChangeFileButtonComponent } from './components/authentication/dashboard/change-file-button/change-file-button.component';
 import { UploadButtonComponent } from './components/authentication/dashboard/upload-button/upload-button.component';
+import { AssessmentsListComponent } from './components/entity/asseessment/assessments-list/assessments-list.component';
+import { AssessmentComponent } from './components/entity/asseessment/assessment/assessment.component';
+import { AssessmentAddComponent } from './components/entity/asseessment/assessment-add/assessment-add.component';
+import {ProfilesComponent} from "./components/entity/profile/profiles/profiles.component";
+import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/profiles-add.component";
 
 
 @NgModule({
@@ -67,18 +63,14 @@ import { UploadButtonComponent } from './components/authentication/dashboard/upl
     ChangePasswordButtonComponent,
     MenuComponent,
     MenuEntryComponent,
-    ProfilesComponent,
-    UsersComponent,
-    AccountsComponent,
-    PaymentsComponent,
     AddButtonComponent,
-    PaymentsAddComponent,
-    PaymentsAddFileComponent,
-    AccountsAddComponent,
-    ProfilesAddComponent,
-    UsersAddComponent,
     ChangeFileButtonComponent,
     UploadButtonComponent,
+    AssessmentsListComponent,
+    AssessmentComponent,
+    AssessmentAddComponent,
+    ProfilesComponent,
+    ProfilesAddComponent,
   ],
   imports: [
     BrowserModule,

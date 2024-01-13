@@ -24,7 +24,7 @@ export class OperationService {
           console.log(operation);
 
           if (operation.groupName.toLowerCase() === "profile") {
-            let type: MenuEntryType = { name: "profiles" };
+            let type: MenuEntryType = { name: "profile" };
             return type;
           } else if (operation.groupName.toLowerCase() === "user") {
             let type: MenuEntryType = { name: "users" };

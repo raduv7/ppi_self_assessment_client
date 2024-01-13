@@ -20,7 +20,7 @@ export class AssessService {
     headers.delete('Content-Type'); // Remove Content-Type if it exists
 
     this.httpClient.post(
-      environment.apiBaseUrl + "/assessment",
+      environment.apiBaseUrl + "assessment",
       formData,
       {
         headers: headers
