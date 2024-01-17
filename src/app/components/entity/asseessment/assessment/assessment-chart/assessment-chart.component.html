@@ -1,0 +1,20 @@
+<div class = "assessmentChartContainer" *ngIf="data.length">
+  <ngx-charts-line-chart
+    [view]="viewSize"
+    [scheme]="colorScheme"
+    [results]="data"
+    [gradient]="useGradient"
+    [xAxis]="showXAxis"
+    [showXAxisLabel]="showXAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [xAxisTickFormatting]="xAxisTickFormatting"
+    [yAxis]="showYAxis"
+    [showYAxisLabel]="showYAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [legend]="showLegend"
+    [timeline]="showTimeline"
+    [autoScale]="useAutoScale"
+    [curve]="curve"
+  >
+  </ngx-charts-line-chart>
+</div>

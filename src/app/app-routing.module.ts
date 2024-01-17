@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import {LandingPageComponent} from "./components/authentication/landing-page/landing-page.component";
 import {SignInPageComponent} from "./components/authentication/sign-in-page/sign-in-page.component";
-import {
-  ChangePasswordPageComponent
-} from "./components/authentication/change-password-page/change-password-page.component";
+import {ChangePasswordPageComponent} from "./components/authentication/change-password-page/change-password-page.component";
 import {DashboardComponent} from "./components/authentication/dashboard/dashboard.component";
 import {ErrorComponent} from "./components/authentication/error/error.component";
-import { sessionGuard} from "./utils/services/session-management/session.guard";
+import { sessionGuard } from "./utils/services/session-management/session.guard";
 import {ProfilesComponent} from "./components/entity/profile/profiles/profiles.component";
 import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/profiles-add.component";
+import {AssessmentComponent} from "./components/entity/asseessment/assessment/assessment.component";
+import {AssessmentAddComponent} from "./components/entity/asseessment/assessment-add/assessment-add.component";
+import {AssessmentsListComponent} from "./components/entity/asseessment/assessments-list/assessments-list.component";
 
 
 const routes: Routes = [
@@ -39,7 +40,25 @@ const routes: Routes = [
     canActivate: [sessionGuard],
   },
   {
-    path: 'profile', pathMatch: 'full',
+    path: 'assessment/:assessmentId',
+    component: AssessmentComponent,
+    data: { title: 'Assessments' },
+    canActivate: [sessionGuard],
+  },
+  {
+    path: 'assessments-list',
+    component: AssessmentsListComponent,
+    data: { title: 'Assessments' },
+    canActivate: [sessionGuard],
+  },
+  {
+    path: 'assessment-add',
+    component: AssessmentAddComponent,
+    data: { title: 'Add Assessment' },
+    canActivate: [sessionGuard],
+  },
+  {
+    path: 'profile',
     component: ProfilesComponent,
     data: { title: 'Profiles' },
     canActivate: [sessionGuard],

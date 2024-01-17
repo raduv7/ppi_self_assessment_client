@@ -82,7 +82,7 @@ export class RouterService {
   setPageTitle(path: string): void {
     let newTitle: string | null = this.getRouteTitleByPath(path);
     if (newTitle === null) {
-      newTitle = 'Monpays';
+      newTitle = 'Self-Assessment Tool';
     }
     this.pageTitle.next(newTitle);
   }

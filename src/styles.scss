@@ -2,16 +2,19 @@
 
 @import "variables";
 
-html, body {
-  height: 100%;
-}
+//html, body {
+  //height: 100%;
+//}
 body {
-  margin: 0;
+  //margin: 0;
   background-color: $primary-colour;
   //font-family: 'Gloria Hallelujah', cursive;
   //font-family: "Rubik", sans-serif;
   color: $tertiary-colour-darkened;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//html, body { height: 100%; }
+body {
+  //margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

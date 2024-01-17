@@ -4,6 +4,11 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,9 +21,7 @@ import { SignInPageComponent } from './components/authentication/sign-in-page/si
 import { AuthFormComponent } from './components/-generics/authentication/auth-form/auth-form.component';
 import { AuthFormSubmitButtonComponent } from './components/-generics/authentication/auth-form/auth-form-submit-button/auth-form-submit-button.component';
 import { AuthFormAbstractFieldComponent } from './components/-generics/authentication/auth-form/auth-form-abstract-field/auth-form-abstract-field.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ChangePasswordPageComponent } from './components/authentication/change-password-page/change-password-page.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/-layout/header/header.component';
 import { HeaderMenuButtonComponent } from './components/-layout/header/header-menu-button/header-menu-button.component';
 import { HeaderTitleComponent } from './components/-layout/header/header-title/header-title.component';
@@ -26,7 +29,6 @@ import { HeaderDashboardButtonComponent } from './components/-layout/header/head
 import { HeaderSignOutButtonComponent } from './components/-layout/header/header-sign-out-button/header-sign-out-button.component';
 import { DashboardComponent } from './components/authentication/dashboard/dashboard.component';
 import { ErrorComponent } from './components/authentication/error/error.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MagicTextComponent } from './components/authentication/dashboard/magic-text/magic-text.component';
 import { ChangePasswordButtonComponent } from './components/authentication/dashboard/change-password-button/change-password-button.component';
 import { MenuComponent } from './components/-layout/menu/menu.component';
@@ -39,6 +41,10 @@ import { AssessmentComponent } from './components/entity/asseessment/assessment/
 import { AssessmentAddComponent } from './components/entity/asseessment/assessment-add/assessment-add.component';
 import {ProfilesComponent} from "./components/entity/profile/profiles/profiles.component";
 import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/profiles-add.component";
+import { AssessmentChartComponent } from './components/entity/asseessment/assessment/assessment-chart/assessment-chart.component';
+import { AssessmentAddFormComponent } from './components/entity/asseessment/assessment-add/assessment-add-form/assessment-add-form.component';
+import { AssessmentAddFormFileFieldComponent } from './components/entity/asseessment/assessment-add/assessment-add-form/assessment-add-form-file-field/assessment-add-form-file-field.component';
+import { AssessmentsListEntryComponent } from './components/entity/asseessment/assessments-list/assessments-list-entry/assessments-list-entry.component';
 
 
 @NgModule({
@@ -71,6 +77,10 @@ import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/pro
     AssessmentAddComponent,
     ProfilesComponent,
     ProfilesAddComponent,
+    AssessmentChartComponent,
+    AssessmentAddFormComponent,
+    AssessmentAddFormFileFieldComponent,
+    AssessmentsListEntryComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,6 +92,7 @@ import {ProfilesAddComponent} from "./components/entity/profile/profiles-add/pro
     FontAwesomeModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    NgxChartsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true },

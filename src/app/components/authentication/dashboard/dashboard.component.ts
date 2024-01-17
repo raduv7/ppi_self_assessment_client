@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
 
-      this.assessService.assess(formData);
+      this.assessService.createAssessment(formData);
       console.log('File uploaded:', this.selectedFile.name);
     }
     else {

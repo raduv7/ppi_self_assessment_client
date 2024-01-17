@@ -1,1 +1,16 @@
-<p>assessment works!</p>
+<div class = "assessment-container">
+
+  <div class = "assessment-video-wrapper">
+    <app-assessment-chart
+            [data]="chartData"
+    ></app-assessment-chart>
+  </div>
+
+  <div class = "assessment-video-wrapper" *ngIf="hasVideo">
+    <video width="1024" height="768" controls>
+      <source [src]="videoUrl" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+</div>

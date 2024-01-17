@@ -23,6 +23,9 @@ export class HttpInterceptorService implements HttpInterceptor {
     ) { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+    console.log('http interceptor: sending request: ', request);
+
     this.isLoading.next(true);
 
     // const requestWithHeaders = request.clone({
@@ -31,13 +34,13 @@ export class HttpInterceptorService implements HttpInterceptor {
 
     return next.handle(request).pipe(
       tap((event: HttpEvent<any>) => {
-        console.log('htttp interceptor --> good response:', event);
+        console.log('http interceptor --> good response:', event);
 
         if (event instanceof HttpResponse) {
           this.isLoading.next(false);
         }
       }, (error: any) => {
-        console.log('htttp interceptor --> bad response:', error);
+        console.log('http interceptor --> bad response:', error);
 
         this.isLoading.next(false);
 

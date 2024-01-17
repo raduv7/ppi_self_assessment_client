@@ -1,18 +1,22 @@
 @import 'variables';
 
 .dashboard-button-container {
+  margin: 0 auto;
   padding: 20px;
 }
 
-.menuButton {
+.button {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 13%;
   color: #090909;
-  width: 13em;
-  height: 3em;
+
+  font-size: 24px;
+  width: 14em;
+  height: 2.8em;
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;

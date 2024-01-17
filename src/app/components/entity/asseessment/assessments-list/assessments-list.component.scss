@@ -1,0 +1,51 @@
+:host {
+  //display: block;
+  min-height: 100%;
+  width: 100%;
+
+  font-family: RobotoDraft, Roboto, "Helvetica Neue, Helvetica, Arial", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 320;
+}
+
+.assessments-list-container {
+  padding-top: 4vh;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.4em;
+
+  .assessment-list-label-wrapper {
+    padding-bottom: 0.8em;
+  }
+
+  .assessment-list-entry-wrapper {
+    //&:not(:last-child) {
+    //  border-top: 1px solid #ccc;
+    //}
+  }
+
+  .assessment-list-add-horizontal-wrapper {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    .assessment-list-add-centered-wrapper {
+      min-width: 0;
+      flex: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

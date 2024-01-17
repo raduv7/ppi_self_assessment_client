@@ -1,0 +1,16 @@
+:host {
+  font-family: RobotoDraft, Roboto, "Helvetica Neue, Helvetica, Arial", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 320;
+}
+
+.assessment-add-form-input-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}

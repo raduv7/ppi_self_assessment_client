@@ -1,1 +1,22 @@
-<p>assessments-list works!</p>
+<div class = "assessments-list-container">
+
+  <p class = "assessment-list-label-wrapper"> <span> Your past assessments: </span> </p>
+  <div class = "assessment-list-entries-list-wrapper" >
+    <div class = "assessment-list-entry-wrapper"
+         *ngFor="let assessment of assessments">
+      <app-assessments-list-entry
+        [inputAssessment]="assessment"
+        (click)="onEntryClick(assessment)"
+      > </app-assessments-list-entry>
+    </div>
+  </div>
+
+  <div class = "assessment-list-add-horizontal-wrapper">
+    <div class = "assessment-list-add-centered-wrapper"></div>
+    <app-add-button
+      [name]="'Add new assessment'"
+      [route]="'assessment-add'"
+    ></app-add-button>
+  </div>
+
+</div>

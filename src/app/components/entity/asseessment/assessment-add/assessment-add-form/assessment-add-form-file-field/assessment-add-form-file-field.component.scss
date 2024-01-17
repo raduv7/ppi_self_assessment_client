@@ -1,0 +1,50 @@
+@import "variables";
+
+:host {
+  min-width: 100%;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  width: 0;
+  visibility: hidden;
+}
+
+.assessment-add-form-file-field-container {
+  flex: 1;
+  display: flex;
+  font-size: 24px;
+  flex-direction: row;
+  gap: 3.2em;
+  justify-content: space-between;
+
+  .assessment-add-form-file-field-label {
+    justify-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .assessment-add-form-file-field-button {
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13%;
+
+    padding: 10px 16px 10px 16px;
+    color: #090909;
+    width: 12em;
+    height: 1.6em;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: $box-shadow-xs;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+  }
+}
+

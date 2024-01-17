@@ -1,0 +1,28 @@
+<div class = assessment-add-form-container>
+  <form (submit)="onFileUpload()">
+    <div class = "assessment-add-form-label-wrapper">
+      <p> <span> Create a new assessment </span> </p>
+    </div>
+
+    <div class = "assessment-add-form-input-wrapper">
+      <app-assessment-add-form-file-field
+        [label]="'Audio file'"
+        [allowedExtensions]="['mp3']"
+        (fileEvent)="setFile('audioFile', $event)"
+      ></app-assessment-add-form-file-field>
+      <app-assessment-add-form-file-field
+        [label]="'Video file'"
+        [allowedExtensions]="['mp4']"
+        (fileEvent)="setFile('videoFile', $event)"
+      ></app-assessment-add-form-file-field>
+      <app-assessment-add-form-file-field
+        [label]="'Wearable data file'"
+        [allowedExtensions]="['csv']"
+        (fileEvent)="setFile('wearableDataFile', $event)"
+      ></app-assessment-add-form-file-field>
+    </div>
+
+
+    <button type="submit" class="button">Upload</button>
+  </form>
+</div>

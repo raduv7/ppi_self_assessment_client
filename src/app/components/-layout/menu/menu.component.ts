@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MenuEntryType} from "../../../utils/models/entities/generics/menu-entry.type";
 import {Router} from "@angular/router";
 import {OperationService} from "../../../utils/services/entities/generics/operation.service";
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable, Subscriber} from "rxjs";
 
 @Component({
   selector: 'app-menu',
@@ -19,15 +19,26 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.operationService.getMenuEntryTypes()
-      .subscribe(types => {
-        console.log(types);
-        this.operations.next(types);
-        // console.log(this.operations.value);
-      });
+    // this.operationService.getMenuEntryTypes()
+    //   .subscribe(types => {
+    //     console.log(types);
+    //     this.operations.next(types);
+    //     // console.log(this.operations.value);
+    //   });
+    const myObs = new Observable<MenuEntryType[]>(
+      subscriber=> {
+        subscriber.next([ {name: "assessments"}, ]);
+      }
+    )
+
+    myObs.subscribe(types => {
+      console.log(types);
+      this.operations.next(types);
+      // console.log(this.operations.value);
+    });
   }
 
   onEntryClick(route: string): void {
-    this.router.navigate(["/" + route]);
+    this.router.navigate(["/" + route + "-list"]);
   }
 }
